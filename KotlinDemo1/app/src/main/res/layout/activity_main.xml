@@ -14,11 +14,43 @@
         android:textSize="@dimen/_30sp" />
 
     <Button
-        android:id="@+id/btnClickMsg"
+        android:id="@+id/btnClick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_lbl_top"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/_20dp"
         android:text="@string/lbl_btn_msg" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_lbl_middle"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/btnClick"
+        android:layout_marginTop="@dimen/_20dp"
+        android:text="@string/lbl_lable2"
+        android:textSize="@dimen/_20sp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ed_message"
+        android:textSize="@dimen/_18sp"
+        android:inputType="text"
+        android:autofillHints="@string/edit_hint_msg"
+        android:hint="@string/edit_hint_msg"
+        android:layout_below="@+id/tv_lbl_middle"
+        android:layout_marginTop="@dimen/_10dp"/>
+
+
+    <Button
+        android:id="@+id/btnShowMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ed_message"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_20dp"
+        android:text="@string/lbl_btn_showmsg" />
+
 </RelativeLayout>

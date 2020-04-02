@@ -2,4 +2,7 @@
     <string name="app_name">KotlinDemo1</string>
     <string name="lbl_lable1">Button On Click Action</string>
     <string name="lbl_btn_msg">Click Here</string>
+    <string name="lbl_lable2">Button Click Show Message On EditTex</string>
+    <string name="edit_hint_msg">Emter your message here ....</string>
+    <string name="lbl_btn_showmsg">Show Message</string>
 </resources>

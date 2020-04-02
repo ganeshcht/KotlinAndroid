@@ -12,8 +12,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         //here i use btnClickMsg which is id of Button view in activity_main.xml file
         //here i directly use setOnClickListener method of Button View
-        btnClickMsg.setOnClickListener {
+        btnClick.setOnClickListener {
             Toast.makeText(this,"I am Clicked!",Toast.LENGTH_SHORT).show()
+        }
+
+        //Here we are getting value from edit text and displaying it on Toast message
+        //first we get text value from edit text (ed_message)
+        val msg=ed_message.text.toString()  //in kotlin there is no concept of getter/setter
+        //On Show Message button click we showing message typed on EditText
+        btnShowMsg.setOnClickListener {
+            Toast.makeText(this,"Your message:$msg",Toast.LENGTH_LONG).show()
         }
     }
 }
