@@ -54,4 +54,14 @@
         android:layout_marginTop="@dimen/_20dp"
         android:text="@string/lbl_btn_showmsg" />
 
+
+    <Button
+        android:id="@+id/btnGetResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnShowMsg"
+        android:layout_centerHorizontal="true"
+        android:text="@string/lbl_btn_getresult"
+        android:layout_marginTop="@dimen/_20dp"/>
+
 </RelativeLayout>

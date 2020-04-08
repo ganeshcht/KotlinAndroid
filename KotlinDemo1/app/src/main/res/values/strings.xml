@@ -5,4 +5,7 @@
     <string name="lbl_lable2">Button Click Show Message On EditTex</string>
     <string name="edit_hint_msg">Emter your message here ....</string>
     <string name="lbl_btn_showmsg">Show Message</string>
+    <string name="lbl_btn_getresult">Get Result From Next Activity</string>
+    <string name="edit_hint_result_msg">Enter your message here</string>
+    <string name="lbl_btn_result_back">Send Result</string>
 </resources>

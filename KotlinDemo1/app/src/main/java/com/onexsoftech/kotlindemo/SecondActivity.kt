@@ -13,7 +13,7 @@ class SecondActivity : AppCompatActivity() {
         //in the second Activity we get the message string from Main Activity and Simply displayed as Toast
         //first we get the not nullable Bundle
         val bundle:Bundle?=intent.extras   //As intent.extras method gives Nullable object. So to avoid null pointer Exception in kotlin use '?'
-        val msg=bundle!!.getString("message") // As bundle is nullable here use '!!' assertion operator
+        val msg:String?=bundle!!.getString("message") // As bundle is nullable here use '!!' assertion operator
         Toast.makeText(this,"$msg",Toast.LENGTH_SHORT).show()
     }
 }

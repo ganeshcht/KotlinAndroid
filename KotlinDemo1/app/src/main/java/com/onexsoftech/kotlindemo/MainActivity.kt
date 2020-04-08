@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         //here i use btnClickMsg which is id of Button view in activity_main.xml file
         //here i directly use setOnClickListener method of Button View
         btnClick.setOnClickListener {
-            Toast.makeText(this,"I am Clicked!",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "I am Clicked!", Toast.LENGTH_SHORT).show()
         }
         //********************Second Exmaple*********************//
         //Here we are getting value from edit text and displaying it on Toast message
@@ -29,11 +29,32 @@ class MainActivity : AppCompatActivity() {
         //*********************third Exmple**********************//
         //Here we are getting value from edit text and passing that value to next Activity using intent
         //first we get string valur from edit text(ed_message)
-        val msg=ed_message.text.toString()
         btnShowMsg.setOnClickListener {
-            val intent=Intent(this,SecondActivity::class.java)// here in second parameter we use kotlin Reflection
-            intent.putExtra("message",msg)
+            val msg: String = ed_message.text.toString()
+
+            val intent = Intent(
+                this,
+                SecondActivity::class.java
+            )// here in second parameter we use kotlin Reflection
+            intent.putExtra("message", msg)
             startActivity(intent)
+        }
+
+        //********************forth Example ***********************//
+        //here we get the result back from next activity using startActivityForResult method
+        btnGetResult.setOnClickListener {
+            val intent = Intent(this, NextActivity::class.java)
+            startActivityForResult(intent,2)
+        }
+    }
+    ///*********************forth Example***************************//
+    // here we override method onActivityResult for getting result from NextActivity
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if(requestCode==2){
+            val result:String=data!!.getStringExtra("result")
+            Toast.makeText(this,"$result",Toast.LENGTH_SHORT).show()
         }
     }
 }

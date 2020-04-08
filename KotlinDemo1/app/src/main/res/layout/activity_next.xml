@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NextActivity"
+    android:padding="@dimen/_5dp">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ed_result_msg"
+        android:hint="@string/edit_hint_result_msg"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/_20sp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/ed_result_msg"
+        android:layout_marginTop="@dimen/_5dp"
+        android:id="@+id/btnResultBack"
+        android:text="@string/lbl_btn_result_back"/>
+
+</RelativeLayout>
